@@ -6,49 +6,59 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio 9.1</title>
+    <title>Laboratorio 14.2</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
-    <h1>Consutla de noticias</h1>
+    
+    <h1>Consulta de noticias</h1>
     <?php
-    require_once("class/noticias.php");
+    if(isset($_SESSION['usuario_valido'])){
+        require_once("class/noticias.php");
 
-    $obj_noticia = new noticia();
-    $noticias = $obj_noticia->consultar_noticias();
+        $obj_noticia = new noticia();
+        $noticias = $obj_noticia->consultar_noticias();
 
-    $nfilas=count($noticias);
+        $nfilas = count($noticias);
 
-    if ($nfilas > 0){
-       print ("<TABLE>\n");
-       print ("<TR>\n");
-       print ("<TH>Titulo</TH>\n");
-       print ("<TH>Texto</TH>\n");
-       print ("<TH>Categoria</TH>\n");
-       print ("<TH>Fecha</TH>\n");
-       print ("<TH>Imagen</TH>\n");
-       print ("</TR>\n");
+        if ($nfilas > 0){
+            print("<table>\n");
+            print("<tr>\n");
+            print("<th>Título</th>\n");
+            print("<th>Texto</th>\n");
+            print("<th>Categoría</th>\n");
+            print("<th>Fecha</th>\n");
+            print("<th>Imagen</th>\n");
+            print("</tr>\n");
 
-       foreach ($noticias as $resultado){
-        print ("<TR>\n");
-        print ("<TD>" . $resultado['titulo'] . "</TD>\n");
-        print ("<TD>" . $resultado['texto'] . "</TD>\n");
-        print ("<TD>" . $resultado['categoria'] . "</TD>\n");
-        print ("<TD>" . date("j/n/Y",strtotime($resultado['fecha']))."</TD>\n");
+            foreach ($noticias as $resultado){
+                print("<tr>\n");
+                print("<td>" . $resultado['titulo'] . "</td>\n");
+                print("<td>" . $resultado['texto'] . "</td>\n");
+                print("<td>" . $resultado['categoria'] . "</td>\n");
+                print("<td>" . date("j/n/Y", strtotime($resultado['fecha'])) . "</td>\n");
 
-        if($resultado['imagen'] !=""){
-            print ("<TD><A TARGET='_black' HREF='img/" . $resultado['imagen'] ."'>
-            <IMG BORDER='0' SRC='img/iconotexto.gif'></A></TD>\n");
+                if($resultado['imagen'] != ""){
+                    print("<td><a target='_blank' href='img/" . $resultado['imagen'] . "'>
+                    <img border='0' src='img/iconotexto.gif'></a></td>\n");
+                }
+                else{
+                    print("<td>&nbsp;</td>\n");
+                }
+                print("</tr>\n");
+            }
+            print("</table>\n");
         }
         else{
-            print ("<TD>&nbsp;</TD>\n");
+            print("No hay noticias disponibles");
         }
-        print ("</TR>\n");
-       }
-       print ("</TABLE>\n");
-    }
-    else{
-        print ("No hay noticias disponibles");
+        ?>
+        <p>[<a href='login.php'>Menú Principal</a>]</p> <!-- Línea agregada -->
+    <?php
+    }else{
+        print("<br><br>\n");
+        print ("<p align='CENTER'>Acceso no autorizado</p>\n");
+        print ("<p align='CENTER'>[<a href='login.php'>Conectar</a>]</p>\n");
     }
     ?>   
 </body>

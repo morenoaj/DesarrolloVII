@@ -17,3 +17,22 @@
    TD {font-size: 10pt; background: #CCCCCC;}
    TD.derecha {font-size: 10pt; text-align: right; background: #FFFFFF;}
    TD.izquierda {font-size: 10pt; text-align: left; background: #FFFFFF;}
+
+  /* Estilos para el formulario */
+.form-group {
+   margin: 10px 0;
+   text-align: left;
+}
+
+.etiqueta-entrada {
+   display: block;
+}
+
+/* Estilos para el botón de submit */
+.input[type="submit"] {
+   background-color: #007bff; /* Cambia el color de fondo según tu preferencia */
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   cursor: pointer;
+}
