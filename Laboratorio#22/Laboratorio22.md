@@ -48,23 +48,25 @@ Parte C. Imagen XAMPP
 4. Iniciamos los servicios del contendor en ejecución ![15](https://github.com/morenoaj/DesarrolloVII/assets/63484452/04e767d1-84e7-476a-a844-7f7615e12ae9)
 4. Validamos que este arriba xampp[` `*http://localhost:3010/dashboard/*](http://localhost:3010/dashboard/)![16](https://github.com/morenoaj/DesarrolloVII/assets/63484452/603c1783-e6c1-4740-9cdb-dba394e3ee10)
 
+
+
+6. Ahora creamos otro contenedor dentro del volumen C:\xampp\htdocs y levantamos los servicios.
 ![17](https://github.com/morenoaj/DesarrolloVII/assets/63484452/13be2bac-4fd0-42f8-a21d-6e8bb43876fb)
 
-6. Ahora creamos otro contenedor dentro del volumen C:\xampp\htdocs y levantamos los servicios.![18](https://github.com/morenoaj/DesarrolloVII/assets/63484452/b898ed57-6c2b-471f-a4fd-b1ed44a749fa)
 6. Creamos un formulario holamundo.php y lo validamos.
+![18](https://github.com/morenoaj/DesarrolloVII/assets/63484452/b898ed57-6c2b-471f-a4fd-b1ed44a749fa)
 
-![19](https://github.com/morenoaj/DesarrolloVII/assets/63484452/32fbcab1-fe15-4a28-a82b-5f230208ad60)
 
 Parte D. Imagen personalizada XAMPP 
 
-1. Crear este archivo llamado “Dockerfile” (sin extensión) y guardarlo en la carpeta c:\xampp\htdocs ![20](https://github.com/morenoaj/DesarrolloVII/assets/63484452/7f54cf7a-b5ad-4bd1-bda6-39ad7362cb07)
+1. Crear este archivo llamado “Dockerfile” (sin extensión) y guardarlo en la carpeta c:\xampp\htdocs ![19](https://github.com/morenoaj/DesarrolloVII/assets/63484452/32fbcab1-fe15-4a28-a82b-5f230208ad60)
 1. Construimos la imagen personalizada xampp-custom
+![20](https://github.com/morenoaj/DesarrolloVII/assets/63484452/7f54cf7a-b5ad-4bd1-bda6-39ad7362cb07)
 
-![21](https://github.com/morenoaj/DesarrolloVII/assets/63484452/4de9c20f-6211-4a44-aefa-0cc69b79edf9)
 
-3. Listamos las imágenes creadas, creamos el contenedor![22](https://github.com/morenoaj/DesarrolloVII/assets/63484452/13f2d784-018b-47ea-b83c-b8dbeb89158d)
+3. Listamos las imágenes creadas, creamos el contenedor![21](https://github.com/morenoaj/DesarrolloVII/assets/63484452/4de9c20f-6211-4a44-aefa-0cc69b79edf9)
 3. Levantamos los servicios del contenedor creado
+![22](https://github.com/morenoaj/DesarrolloVII/assets/63484452/13f2d784-018b-47ea-b83c-b8dbeb89158d)
 
-![23](https://github.com/morenoaj/DesarrolloVII/assets/63484452/8411ed46-5550-4344-841c-2b4e7e69801a)
 
-5. Validamos en el navegador lo realizado.![](Aspose.Words.968b2258-c243-4606-a4e3-cdfa3c1a36a0.024.jpeg)
+5. Validamos en el navegador lo realizado.![23](https://github.com/morenoaj/DesarrolloVII/assets/63484452/8411ed46-5550-4344-841c-2b4e7e69801a)
